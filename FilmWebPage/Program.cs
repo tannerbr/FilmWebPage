@@ -1,4 +1,4 @@
-using FilmWebPage.Models;
+using Mission06_Briggs.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

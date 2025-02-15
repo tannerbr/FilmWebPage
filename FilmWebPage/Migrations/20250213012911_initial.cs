@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace FilmWebPage.Migrations
+namespace Mission06_Briggs.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration

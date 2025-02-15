@@ -1,4 +1,4 @@
-namespace FilmWebPage.Models
+namespace Mission06_Briggs.Models
 {
     public class ErrorViewModel
     {

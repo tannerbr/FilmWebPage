@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using FilmWebPage.Models;
+using Mission06_Briggs.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FilmWebPage.Controllers
+namespace Mission06_Briggs.Controllers
 {
     public class HomeController : Controller
     {
