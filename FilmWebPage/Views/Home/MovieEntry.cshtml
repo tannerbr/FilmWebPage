@@ -1,0 +1,44 @@
+﻿@model FilmWebPage.Models.FilmCollection
+
+<h1>Movie Entry Form</h1>
+<form method="post" asp-action="MovieEntry" asp-controller="Home">
+    <!-- Category -->
+    <label asp-for="Category">Category:</label>
+    <input asp-for="Category" type="text" id="category" name="category" required><br><br>
+
+    <!-- Title -->
+    <label asp-for="Title">Title:</label>
+    <input asp-for="Title" type="text" id="title" name="title" required><br><br>
+
+    <!-- Year -->
+    <label asp-for="Year">Year:</label>
+    <input asp-for="Year" type="number" id="year" name="year" required><br><br>
+
+    <!-- Director -->
+    <label asp-for="Director">Director:</label>
+    <input asp-for="Director" type="text" id="director" name="director" required><br><br>
+
+    <!-- Rating -->
+    <label asp-for="Rating">Rating:</label>
+    <select asp-for="Rating" id="rating" name="rating" required>
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+    </select><br><br>
+
+    <!-- Edited -->
+    <label asp-for="Edited">Edited:</label>
+    <input asp-for="Edited" type="radio" id="edited_yes" name="Edited" value="true"> Yes
+    <input asp-for="Edited" type="radio" id="edited_no" name="Edited" value="false"> No<br><br>
+
+    <!-- Lent To -->
+    <label asp-for="LentTo">Lent To:</label>
+    <input asp-for="LentTo" type="text" id="lent_to" name="lent_to"><br><br>
+
+    <!-- Notes -->
+    <label asp-for="Notes">Notes:</label>
+    <input asp-for="Notes" type="text" id="notes" name="notes" maxlength="25"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
