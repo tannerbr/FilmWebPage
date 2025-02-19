@@ -1,15 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using FilmWebPage.Models;
 
 namespace Mission06_Briggs.Models
 {
-    public class FilmCollection
+    public class Movies
     {
         [Key]
         [Required]
-        public int FilmID { get; set; }
+        public int MovieId { get; set; }
 
-        [Required]
-        public string Category { get; set; }
+        [ForeignKey("CategoryId")]
+        public int? CategoryId { get; set; }
+        public Categories? Categories { get; set; }
 
         [Required]
         public string Title { get; set; }
@@ -28,6 +31,8 @@ namespace Mission06_Briggs.Models
 
         [StringLength(100)]
         public string? LentTo { get; set; } // Optional, explicitly nullable
+
+        public bool CopiedToPlex { get; set; }
 
         [MaxLength(25)]
         public string? Notes { get; set; } // Optional, explicitly nullable, limited to 25 characters

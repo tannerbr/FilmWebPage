@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FilmWebPage.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mission06_Briggs.Models
 {
@@ -6,6 +7,9 @@ namespace Mission06_Briggs.Models
     {
         public FilmContext(DbContextOptions<FilmContext> options) : base(options) { }
 
-        public DbSet<FilmCollection> FilmCollections { get; set; }
+        public DbSet<Movies> Movies { get; set; }
+
+        public DbSet<Categories> Categories { get; set; }
+
     }
 }

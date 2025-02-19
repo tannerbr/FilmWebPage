@@ -1,10 +1,20 @@
-﻿@model Mission06_Briggs.Models.FilmCollection
+﻿@using FilmWebPage.Models
+@model Movies
+
 
 <h1>Movie Entry Form</h1>
 <form method="post" asp-action="MovieEntry" asp-controller="Home">
+    <!-- MovieID -->
+    <input type="hidden" asp-for="MovieId" />
+
     <!-- Category -->
-    <label asp-for="Category">Category:</label>
-    <input asp-for="Category" type="text" id="category" name="category" required><br><br>
+    <select asp-for="CategoryId">
+        <option value="">Select a Category</option>
+        @foreach (Categories c in ViewBag.Categories)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+        }
+    </select>
 
     <!-- Title -->
     <label asp-for="Title">Title:</label>
@@ -35,6 +45,11 @@
     <!-- Lent To -->
     <label asp-for="LentTo">Lent To:</label>
     <input asp-for="LentTo" type="text" id="lent_to" name="lent_to"><br><br>
+
+    <!-- CopiedToPlex -->
+    <label asp-for="CopiedToPlex">Edited:</label>
+    <input asp-for="CopiedToPlex" type="radio" id="copied_yes" name="Copied" value="true"> Yes
+    <input asp-for="CopiedToPlex" type="radio" id="copied_no" name="Copied" value="false"> No<br><br>
 
     <!-- Notes -->
     <label asp-for="Notes">Notes:</label>
